@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "biblioteca-29885": {
+      "hosting": {
+        "app_libreria": [
+          "biblioteca-29885"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "biblioteca-29885"
+  }
+}

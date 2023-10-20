@@ -1,0 +1,40 @@
+<h1 class="titulo"><strong>BUSCAR LIBRO</strong></h1>
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 40px; ">
+    <label style="color: #075861da; font-weight: bold;">Buscar Libro</label>&nbsp;
+    <input (keyup)="searchByTitle()" type="text" style="border-color: #155c64da; border-style: solid; border-radius: 15px; width: 200px;"   [(ngModel)]="libroMostrado" />&nbsp;
+   
+      
+  
+  </div>
+  
+  <div style="display: flex; align-items: center; justify-content: center">&nbsp;
+    <ol> <li *ngFor="let biblioteca of bibliotecas;let i=index">
+    
+      <div style="margin-top: 4px;">
+       <strong style="color: #075861da;">{{ biblioteca.titulo }}  </strong> 
+       <strong style="color: #08191bda; font-weight: bold;">(ID: {{ biblioteca.id }}) </strong> 
+       <strong style="color: #075861da;">- Copias disponibles: {{ biblioteca.copiasDisponibles }} </strong> 
+       
+        &nbsp;&nbsp;<button (click)="prestarLibro(biblioteca,i)"  style="background-color: #075861da;">Prestar</button>
+      </div>
+    
+    </li></ol>
+  
+      <div *ngIf="bibliotecas.length == 0" style="margin-bottom: 20px; margin-top: 10px;">
+        <strong style="color: #075861da;"> No se han agregado libros</strong>
+        <br>
+      </div>
+  </div>
+        
+  <br> <br> <br>
+  <div style="display: flex; align-items: center; justify-content: center">
+
+  
+    <br><br>
+      
+  
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center">
+  <button (click)="borrarLibros()" class="cancel">Borrar libros</button>&nbsp;&nbsp;
+  <button (click)="regresar()" class="search">Regresar</button>
+  </div>

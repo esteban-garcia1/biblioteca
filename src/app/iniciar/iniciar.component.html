@@ -1,0 +1,24 @@
+<div class="tarjeta"></div>
+
+
+<div style="display: flex; align-items: center; justify-content: center">
+    
+    <form [formGroup]="formIniciar" (ngSubmit)="onSubmit()">
+      <div style="width: 300px; align-items: center; justify-content: center">
+        <div style="display: flex;  align-items: center;   justify-content: center" ><h2 style="color: #075861da;">Inicio de Sesion</h2></div><br>
+        <label for="email" style="color: #075861da; font-weight: bold;">Email:</label>
+        <input type="email" id="email" style="border-color: #155c64da; border-style: solid; border-radius: 15px;" formControlName="email" placeholder="Email" required size="20">
+  
+        <label for="password" style="color: #075861da; font-weight: bold;">Password:</label>
+        <input type="password" id="password" formControlName="password" style="border-color: #155c64da; border-style: solid; border-radius: 15px;" placeholder="Password" required size="15">
+      </div>
+      <div style="margin-bottom: 30px;">
+        <strong> ¿ No tienes cuenta ?</strong> &nbsp;<strong (click)="registrarme()" style="color: #075861da; cursor: pointer;"> Crear cuenta</strong>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center">
+        <button type="submit" style="cursor:pointer; background-color: #075861da; color: white;">Ingresar</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      
+    </form>
+    
+</div>

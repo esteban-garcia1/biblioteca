@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "app_libreria",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

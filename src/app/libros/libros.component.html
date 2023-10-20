@@ -1,0 +1,28 @@
+<h1 class="titulo"><strong>REGISTRAR LIBRO</strong></h1>
+<div class="tarjeta">
+
+  
+    <form [formGroup]="myForm">
+      <label for="id" style="color: #075861da; font-weight: bold;">ID:</label>
+      <input type="text" style="border-color: #155c64da; border-style: solid; border-radius: 15px;" formControlName="id" id="id"  name="id" required>
+  
+      <label for="titulo" style="color: #075861da; font-weight: bold;">Titulo:</label>
+      <input type="text" id="titulo" style="border-color: #155c64da; border-style: solid; border-radius: 15px;" formControlName="titulo" name="titulo"  required>
+  
+      <label for="copiasDisponibles" style="color: #075861da; font-weight: bold;">Numero de copias:</label>
+      <input type="number" id="copiasDisponibles" style="border-color: #155c64da; border-style: solid; border-radius: 15px;" formControlName="copiasDisponibles" name="copiasDisponibles" required>
+     
+      <button (click)="saveBook()"  style="background-color: #075861da;">Registrar Libro</button>&nbsp;
+  
+      
+      <button (click)="regresar()" class="search" style="background-color: #022225da;">Regresar</button>
+     
+
+   
+
+   
+    </form>
+
+    <div>
+    
+  </div>
